@@ -1,15 +1,26 @@
-# Azure Zombie Hunter 🧟‍♂️
+# 🧟‍♂️ Azure Zombie Hunter
 
-Stop burning cash on dead resources.
+**Status:** Active | **License:** MIT | **Author:** Dinesh Perabathula
 
-azure-zombie-hunter is an open-source utility that scans your Azure subscription for "zombie" resources—unattached managed disks, idle public IPs, and orphaned network interfaces—that are silently inflating your cloud bill.
+### ⚡ The Problem
+Cloud waste is silent. Companies lose thousands of dollars on "Zombie" resources—Managed Disks and IPs that are unattached but still billing.
 
-Features:
+### 🛠 The Solution
+Azure Zombie Hunter is a lightweight, Python-based utility that:
+1.  **Authenticates** securely using Azure Identity.
+2.  **Scans** your subscription for unattached/idle resources.
+3.  **Reports** potential savings immediately.
 
-🚀 Instant Scan: Identifies unattached Managed Disks immediately.
+### 🚀 Quick Start (Cloud Shell)
+Run this directly in Azure Cloud Shell (Bash):
 
-🐳 Docker Ready: Run it anywhere with a single command.
+```bash
+# 1. Clone the repo
+git clone git@github.com:Dineshpera/azure-zombie-hunter.git
+cd azure-zombie-hunter
 
-🔒 Secure: Runs locally using your Azure CLI credentials. No keys stored.
+# 2. Install dependencies
+pip install --user -r requirements.txt
 
-Built by Dinesh Perabathula.
+# 3. Hunt
+python hunter.py
